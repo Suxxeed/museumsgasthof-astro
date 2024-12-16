@@ -1,0 +1,29 @@
+---
+const { title = "Museumsgasthof" } = Astro.props;
+---
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+  </head>
+  <body>
+    <header class="bg-gray-800 text-white p-4">
+      <nav>
+        <ul class="flex space-x-4">
+          <li><a href="/" class="hover:underline">Start</a></li>
+          <li><a href="/speisekarte" class="hover:underline">Speisekarte</a></li>
+          <li><a href="/ueber" class="hover:underline">Über</a></li>
+          <li><a href="/kontakt" class="hover:underline">Kontakt</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main class="p-4">
+      <slot />
+    </main>
+    <footer class="bg-gray-800 text-white p-4 text-center">
+      <p>© {new Date().getFullYear()} Museumsgasthof - Alle Rechte vorbehalten</p>
+    </footer>
+  </body>
+</html>
