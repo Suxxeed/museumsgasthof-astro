@@ -1,0 +1,17 @@
+---
+import Layout from '../layouts/BaseLayout.astro';
+const { title = "Datenschutz - Museumsgasthof" } = Astro.props;
+---
+<Layout title={title}>
+  <h1 class="text-3xl font-bold mb-4">Datenschutz</h1>
+  
+  <section class="bg-white shadow-md rounded p-6 mb-6">
+    <h2 class="text-2xl font-semibold mb-2">Datenschutzerklärung</h2>
+    <p>Hier können Sie Ihre Datenschutzerklärung einfügen.</p>
+  </section>
+  
+  <section class="bg-white shadow-md rounded p-6">
+    <h2 class="text-2xl font-semibold mb-2">Erhebung und Verarbeitung personenbezogener Daten</h2>
+    <p>Hier können Sie detaillierte Informationen zur Datenverarbeitung hinzufügen.</p>
+  </section>
+</Layout>

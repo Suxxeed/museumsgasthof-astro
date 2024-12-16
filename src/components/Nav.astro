@@ -1,0 +1,48 @@
+---
+const { currentPath } = Astro.props;
+---
+<nav class="navbar">
+  <div class="navbar-container">
+    <!-- Logo -->
+    <div class="logo">
+      <a href="/">
+        <img src="/images/logo.png" alt="Museumsgasthof Logo" class="logo-image">
+      </a>
+    </div>
+    
+    <!-- Navigationslinks für Desktop -->
+    <ul class="nav-links">
+      <li><a href="/" class={currentPath === '/' ? 'active' : ''}>Start</a></li>
+      <li><a href="/speisekarte" class={currentPath === '/speisekarte' ? 'active' : ''}>Speisekarte</a></li>
+      <li><a href="/ueber" class={currentPath === '/ueber' ? 'active' : ''}>Über</a></li>
+      <li><a href="/kontakt" class={currentPath === '/kontakt' ? 'active' : ''}>Kontakt</a></li>
+    </ul>
+    
+    <!-- Hamburger Menü Button für Mobile -->
+    <button class="hamburger" id="hamburger">
+      ☰
+    </button>
+  </div>
+  
+  <!-- Mobile Menü -->
+  <ul class="mobile-menu hidden" id="mobile-menu">
+    <li><a href="/" class={currentPath === '/' ? 'active' : ''}>Start</a></li>
+    <li><a href="/speisekarte" class={currentPath === '/speisekarte' ? 'active' : ''}>Speisekarte</a></li>
+    <li><a href="/ueber" class={currentPath === '/ueber' ? 'active' : ''}>Über</a></li>
+    <li><a href="/kontakt" class={currentPath === '/kontakt' ? 'active' : ''}>Kontakt</a></li>
+  </ul>
+
+  <script>
+    // Mobile Menü Toggle
+    document.addEventListener('DOMContentLoaded', () => {
+      const hamburger = document.getElementById('hamburger');
+      const mobileMenu = document.getElementById('mobile-menu');
+
+      if (hamburger && mobileMenu) { // Überprüfen, ob die Elemente existieren
+        hamburger.addEventListener('click', () => {
+          mobileMenu.classList.toggle('hidden');
+        });
+      }
+    });
+  </script>
+</nav>

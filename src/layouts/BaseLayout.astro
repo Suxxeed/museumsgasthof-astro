@@ -1,5 +1,8 @@
 ---
+import Nav from '../components/Nav.astro';
+import '../styles/global.css'; // Import der eigenen CSS-Datei
 const { title = "Museumsgasthof" } = Astro.props;
+const currentPath = Astro.url.pathname;
 ---
 <!DOCTYPE html>
 <html lang="de">
@@ -7,23 +10,29 @@ const { title = "Museumsgasthof" } = Astro.props;
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{title}</title>
+    <!-- Noto Serif Schriftarten von Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap" rel="stylesheet">
   </head>
   <body>
-    <header class="bg-gray-800 text-white p-4">
-      <nav>
-        <ul class="flex space-x-4">
-          <li><a href="/" class="hover:underline">Start</a></li>
-          <li><a href="/speisekarte" class="hover:underline">Speisekarte</a></li>
-          <li><a href="/ueber" class="hover:underline">Über</a></li>
-          <li><a href="/kontakt" class="hover:underline">Kontakt</a></li>
-        </ul>
-      </nav>
-    </header>
-    <main class="p-4">
+    <!-- Navigation einfügen -->
+    <Nav currentPath={currentPath} />
+    
+    <!-- Hauptinhalt -->
+    <main class="main-content">
       <slot />
     </main>
-    <footer class="bg-gray-800 text-white p-4 text-center">
-      <p>© {new Date().getFullYear()} Museumsgasthof - Alle Rechte vorbehalten</p>
+    
+    <!-- Footer -->
+    <footer>
+      <div class="footer-links">
+        <p>© {new Date().getFullYear()} Museumsgasthof - Alle Rechte vorbehalten</p>
+        <div class="footer-navigation">
+          <a href="/impressum">Impressum</a>
+          <a href="/datenschutz">Datenschutz</a>
+        </div>
+      </div>
     </footer>
   </body>
 </html>

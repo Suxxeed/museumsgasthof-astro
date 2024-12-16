@@ -1,0 +1,26 @@
+---
+import Layout from '../layouts/BaseLayout.astro';
+const { title = "Impressum - Museumsgasthof" } = Astro.props;
+---
+<Layout title={title}>
+  <h1 class="text-3xl font-bold mb-4">Impressum</h1>
+  
+  <section class="bg-white shadow-md rounded p-6 mb-6">
+    <h2 class="text-2xl font-semibold mb-2">Angaben gemäß § 5 TMG</h2>
+    <p><strong>Museumsgasthof</strong></p>
+    <p>Musterstraße 123</p>
+    <p>12345 Musterstadt</p>
+    
+    <h2 class="text-2xl font-semibold mt-6 mb-2">Kontakt</h2>
+    <p><strong>Telefon:</strong> 0123 / 456789</p>
+    <p><strong>E-Mail:</strong> <a href="mailto:info@museumsgasthof.de" class="text-blue-500 hover:underline">info@museumsgasthof.de</a></p>
+    
+    <h2 class="text-2xl font-semibold mt-6 mb-2">Vertreten durch:</h2>
+    <p>Max Mustermann</p>
+  </section>
+  
+  <section class="bg-white shadow-md rounded p-6">
+    <h2 class="text-2xl font-semibold mb-2">Haftungsausschluss</h2>
+    <p>Hier können Sie Ihren Haftungsausschluss einfügen.</p>
+  </section>
+</Layout>

@@ -1,0 +1,271 @@
+/* src/styles/global.css */
+
+/* Grundlegende Stile */
+body {
+  font-family: 'Noto Serif', serif;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  color: #333333;
+}
+
+/* Navigation */
+.navbar {
+  background-color: #2d3748; /* Dunkelgrau */
+  color: white;
+  padding: 0.75rem 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Logo */
+.logo-image {
+  height: 40px;
+  width: auto;
+}
+
+/* Navigationslinks für Desktop */
+.nav-links {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  margin-left: 1.5rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+.nav-links a.active,
+.nav-links a:hover {
+  color: #1e90ff; /* Hellblau */
+}
+
+/* Hamburger Menü Button für Mobile */
+.hamburger {
+  display: none; /* Versteckt auf Desktop */
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Mobile Menü */
+.mobile-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background-color: #2d3748;
+}
+
+.mobile-menu li {
+  border-bottom: 1px solid #555555;
+}
+
+.mobile-menu li:last-child {
+  border-bottom: none;
+}
+
+.mobile-menu a {
+  display: block;
+  padding: 0.75rem 1rem;
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+.mobile-menu a.active,
+.mobile-menu a:hover {
+  background-color: #1e90ff; /* Hellblau */
+  color: white;
+}
+
+/* Versteckt das mobile Menü standardmäßig */
+.hidden {
+  display: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  /* Versteckt die Desktop-Navigation */
+  .nav-links {
+    display: none;
+  }
+
+  /* Zeigt den Hamburger-Button */
+  .hamburger {
+    display: block;
+  }
+
+  /* Mobile Menü anzeigen, wenn nicht versteckt */
+  .mobile-menu.hidden {
+    display: none;
+  }
+
+  .mobile-menu {
+    display: block;
+  }
+}
+
+/* Hauptinhalt */
+.main-content {
+  padding: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Footer */
+footer {
+  background-color: #2d3748;
+  color: #ffffff;
+  padding: 1rem;
+  text-align: center;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-navigation {
+  margin-top: 0.5rem;
+}
+
+.footer-navigation a {
+  color: #cccccc;
+  text-decoration: none;
+  margin: 0 0.5rem;
+  font-size: 0.875rem;
+}
+
+.footer-navigation a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+/* Zusätzliche Stile für Ihre Seiten */
+.info-box {
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.section-title,
+.section-heading {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.main-heading {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.subheading {
+  font-size: 1.125rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.paragraph {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.center-image {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+  margin-top: 1.5rem;
+}
+
+.raumbilder {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.raum-image {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.contact-info {
+  font-size: 1.125rem;
+}
+
+.contact-link {
+  color: #1e90ff;
+  text-decoration: none;
+}
+
+.contact-link:hover {
+  text-decoration: underline;
+}
+
+.menu-list {
+  list-style-type: disc;
+  list-style-position: inside;
+  margin-bottom: 1.5rem;
+  font-size: 1.125rem;
+}
+
+.pdf-link {
+  display: inline-block;
+  background-color: #1e90ff;
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.pdf-link:hover {
+  background-color: #1c86ee;
+}
+
+/* Responsive Anpassungen für andere Elemente */
+@media (max-width: 768px) {
+  .raumbilder {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .raum-image {
+    width: 90%;
+    max-width: 400px;
+  }
+}

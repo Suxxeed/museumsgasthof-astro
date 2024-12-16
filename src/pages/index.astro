@@ -2,12 +2,24 @@
 import Layout from '../layouts/BaseLayout.astro';
 ---
 <Layout title="Museumsgasthof - Start">
-  <h1 class="text-3xl font-bold mb-4">Willkommen im Museumsgasthof</h1>
-  <p>Der Museumsgasthof ist ein traditionsreiches Haus mit einer langen Geschichte. Wir bieten regionale Spezialitäten und ein gemütliches Ambiente.</p>
-  <h2 class="text-2xl font-semibold mt-6">Unsere Öffnungszeiten</h2>
-  <ul class="list-disc list-inside">
-    <li>Mo-Fr: 11:00 - 22:00 Uhr</li>
-    <li>Sa-So: 10:00 - 23:00 Uhr</li>
-  </ul>
-  <img src="/images/haus.jpg" alt="Außenansicht des Gasthofs" class="mt-6 rounded shadow-lg">
+
+  <div class="info-box">
+    <h2 class="section-title">Besitzerwechsel und Webseiten-Update</h2>
+    <p class="paragraph">Liebe Gäste,</p>
+    <p class="paragraph">wir freuen uns, Ihnen mitteilen zu können, dass sich der Besitzer des Museumsgasthofs geändert hat. Mit dieser Veränderung möchten wir Ihnen weiterhin exzellente Speisen und ein angenehmes Ambiente bieten.</p>
+    <p class="paragraph">Bitte haben Sie Verständnis dafür, dass unsere Webseite derzeit noch in Arbeit ist. Wir arbeiten intensiv daran, Ihnen bald eine vollständig funktionierende und informative Online-Präsenz zur Verfügung zu stellen.</p>
+    <p class="paragraph bold">Ihr neues Team des Museumsgasthofs</p>
+  </div>
+
+  <img src="/images/central.jpg" alt="Zentrale Ansicht des Gasthofs" class="center-image mt-6">
+
+  <h1 class="main-heading">Willkommen im Museumsgasthof</h1>
+  <p class="subheading">Der Museumsgasthof ist ein traditionsreiches Haus mit einer langen Geschichte. Wir bieten regionale Spezialitäten und ein gemütliches Ambiente.</p>
+  
+  <h2 class="section-heading">Unsere Räume</h2>
+  <div class="raumbilder">
+    <img src="/images/raum1.jpg" alt="Raum 1" class="raum-image">
+    <img src="/images/raum2.jpg" alt="Raum 2" class="raum-image">
+    <img src="/images/raum3.jpg" alt="Raum 3" class="raum-image">
+  </div>
 </Layout>
