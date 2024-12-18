@@ -1,18 +1,76 @@
-/* src/styles/global.css */
-
-/* Grundlegende Stile */
+@charset "UTF-8";
 body {
-  font-family: 'Noto Serif', serif;
+  font-family: "Noto Serif", serif;
   margin: 0;
   padding: 0;
-  background-color: #ffffff;
-  color: #333333;
+  background-color: #ECE8E2;
+  color: #000000;
 }
 
-/* Navigation */
+img {
+  max-width: 100%;
+  min-width: 100%;
+}
+
+p {
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+h1 {
+  font-family: "Noto Serif Display", serif;
+  font-optical-sizing: auto;
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0;
+}
+
+h2 {
+  font-family: "Noto Serif Display", serif;
+  font-optical-sizing: auto;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+h3 {
+  font-family: "Noto Serif Display", serif;
+  font-optical-sizing: auto;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+h4 {
+  font-family: "Noto Serif", serif;
+  font-optical-sizing: auto;
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+span {
+  color: #8F1E31;
+}
+
+button {
+  background-color: #ECE8E2;
+  border-color: #8F1E31;
+  border-width: 0.75px 0.75px 2px 1.75px;
+}
+
+.hidden {
+  display: none;
+}
+
+.main-content {
+  padding: 1rem;
+  max-width: 60%;
+  margin: 0 auto;
+  /* Navigation */
+}
+
 .navbar {
-  background-color: #2d3748; /* Dunkelgrau */
-  color: white;
+  background-color: #ECE8E2;
   padding: 0.75rem 1rem;
   position: sticky;
   top: 0;
@@ -26,11 +84,16 @@ body {
   max-width: 1200px;
   margin: 0 auto;
 }
+.navbar-container a {
+  text-decoration: none;
+  color: #000000;
+  font-size: 14px;
+}
 
-/* Logo */
 .logo-image {
   height: 40px;
   width: auto;
+  display: none;
 }
 
 /* Navigationslinks für Desktop */
@@ -40,129 +103,33 @@ body {
   margin: 0;
   padding: 0;
 }
-
 .nav-links li {
   margin-left: 1.5rem;
 }
-
 .nav-links a {
-  text-decoration: none;
-  color: white;
-  font-size: 1rem;
   transition: color 0.3s;
 }
-
-.nav-links a.active,
-.nav-links a:hover {
-  color: #1e90ff; /* Hellblau */
+.nav-links a.active, .nav-links a:hover {
+  color: #8F1E31;
 }
 
-/* Hamburger Menü Button für Mobile */
-.hamburger {
-  display: none; /* Versteckt auf Desktop */
-  background: none;
-  border: none;
-  color: white;
-  font-size: 1.5rem;
-  cursor: pointer;
+.events {
+  padding: 6% 0;
 }
 
-/* Mobile Menü */
-.mobile-menu {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  background-color: #2d3748;
+.intro-text {
+  padding: 10% 0 10% 20%;
+  font-size: 14px;
 }
 
-.mobile-menu li {
-  border-bottom: 1px solid #555555;
+.raeume {
+  padding: 10% 0;
+}
+.raeume p {
+  font-size: 12px;
+  padding-top: 2em;
 }
 
-.mobile-menu li:last-child {
-  border-bottom: none;
-}
-
-.mobile-menu a {
-  display: block;
-  padding: 0.75rem 1rem;
-  text-decoration: none;
-  color: white;
-  font-size: 1rem;
-  transition: background-color 0.3s;
-}
-
-.mobile-menu a.active,
-.mobile-menu a:hover {
-  background-color: #1e90ff; /* Hellblau */
-  color: white;
-}
-
-/* Versteckt das mobile Menü standardmäßig */
-.hidden {
-  display: none;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  /* Versteckt die Desktop-Navigation */
-  .nav-links {
-    display: none;
-  }
-
-  /* Zeigt den Hamburger-Button */
-  .hamburger {
-    display: block;
-  }
-
-  /* Mobile Menü anzeigen, wenn nicht versteckt */
-  .mobile-menu.hidden {
-    display: none;
-  }
-
-  .mobile-menu {
-    display: block;
-  }
-}
-
-/* Hauptinhalt */
-.main-content {
-  padding: 1rem;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-/* Footer */
-footer {
-  background-color: #2d3748;
-  color: #ffffff;
-  padding: 1rem;
-  text-align: center;
-}
-
-.footer-links {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.footer-navigation {
-  margin-top: 0.5rem;
-}
-
-.footer-navigation a {
-  color: #cccccc;
-  text-decoration: none;
-  margin: 0 0.5rem;
-  font-size: 0.875rem;
-}
-
-.footer-navigation a:hover {
-  color: #ffffff;
-  text-decoration: underline;
-}
-
-/* Zusätzliche Stile für Ihre Seiten */
 .info-box {
   background-color: #ffffff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -171,101 +138,18 @@ footer {
   margin-bottom: 1.5rem;
 }
 
-.section-title,
-.section-heading {
-  font-size: 1.5rem;
-  font-weight: 600;
-  margin-bottom: 0.75rem;
-}
-
-.main-heading {
-  font-size: 2.5rem;
-  font-weight: bold;
-  margin-bottom: 1.5rem;
+footer {
+  padding: 1rem;
   text-align: center;
 }
 
-.subheading {
-  font-size: 1.125rem;
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
-.paragraph {
-  margin-bottom: 1rem;
-  line-height: 1.6;
-}
-
-.bold {
-  font-weight: bold;
-}
-
-.center-image {
-  display: block;
-  margin: 0 auto;
-  max-width: 100%;
-  height: auto;
-  margin-top: 1.5rem;
-}
-
-.raumbilder {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1rem;
-  margin-top: 2rem;
-}
-
-.raum-image {
-  width: 300px;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 8px;
-}
-
-.contact-info {
-  font-size: 1.125rem;
-}
-
-.contact-link {
-  color: #1e90ff;
-  text-decoration: none;
-}
-
-.contact-link:hover {
-  text-decoration: underline;
-}
-
-.menu-list {
-  list-style-type: disc;
-  list-style-position: inside;
-  margin-bottom: 1.5rem;
-  font-size: 1.125rem;
-}
-
-.pdf-link {
-  display: inline-block;
-  background-color: #1e90ff;
-  color: #ffffff;
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
-  text-decoration: none;
-  transition: background-color 0.3s;
-}
-
-.pdf-link:hover {
-  background-color: #1c86ee;
-}
-
-/* Responsive Anpassungen für andere Elemente */
-@media (max-width: 768px) {
-  .raumbilder {
-    flex-direction: column;
-    align-items: center;
+@media (min-width: 577px) {
+  .intro-text {
+    padding: 10% 0 10% 40%;
+    font-size: 14px;
   }
-
-  .raum-image {
-    width: 90%;
-    max-width: 400px;
+  .info-box {
+    max-width: 60%;
+    margin: 0 auto 1.5rem auto;
   }
-}
+}/*# sourceMappingURL=global.css.map */
