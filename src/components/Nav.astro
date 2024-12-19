@@ -13,8 +13,8 @@ const { currentPath } = Astro.props;
     
     <!-- Navigationslinks -->
     <ul class="nav-links">
-      <li><a href="/speisekarte.pdf" target="_blank" rel="noopener noreferrer"> Speisekarte</a></li>
-      <li><a href="/kontakt" class={currentPath === '/kontakt' ? 'active' : ''}><button>Kontakt</button></a></li>
+      <li class="border-button"><a href="/speisekarte.pdf" target="_blank" rel="noopener noreferrer"><h3>Speisekarte</h3></a></li>
+      <li ><a href="/kontakt" class="border-button" class={currentPath === '/kontakt' ? 'active' : ''}><h3 class="border-button">Kontakt</h3></a></li>
     </ul>
 
   </div>

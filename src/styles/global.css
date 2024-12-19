@@ -20,7 +20,7 @@ p {
 h1 {
   font-family: "Noto Serif Display", serif;
   font-optical-sizing: auto;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 700;
   margin: 0;
 }
@@ -33,10 +33,9 @@ h2 {
 }
 
 h3 {
-  font-family: "Noto Serif Display", serif;
+  font-family: "Noto Serif", serif;
   font-optical-sizing: auto;
-  font-size: 20px;
-  font-weight: 700;
+  font-size: 10px;
 }
 
 h4 {
@@ -52,7 +51,7 @@ span {
   color: #8F1E31;
 }
 
-button {
+.border-button {
   background-color: #ECE8E2;
   border-color: #8F1E31;
   border-width: 0.75px 0.75px 2px 1.75px;
@@ -64,7 +63,7 @@ button {
 
 .main-content {
   padding: 1rem;
-  max-width: 60%;
+  max-width: 90%;
   margin: 0 auto;
   /* Navigation */
 }
@@ -87,7 +86,6 @@ button {
 .navbar-container a {
   text-decoration: none;
   color: #000000;
-  font-size: 14px;
 }
 
 .logo-image {
@@ -104,7 +102,7 @@ button {
   padding: 0;
 }
 .nav-links li {
-  margin-left: 1.5rem;
+  margin-left: 1rem;
 }
 .nav-links a {
   transition: color 0.3s;
@@ -127,14 +125,14 @@ button {
 }
 .raeume p {
   font-size: 12px;
-  padding-top: 2em;
+  padding-bottom: 4em;
 }
 
 .info-box {
   background-color: #ffffff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
-  padding: 1.5rem;
+  padding: 1rem 1.5rem;
   margin-bottom: 1.5rem;
 }
 
@@ -144,12 +142,54 @@ footer {
 }
 
 @media (min-width: 577px) {
+  h1 {
+    font-size: 28px;
+  }
+  h3 {
+    font-size: 16px;
+  }
+  h4 {
+    font-size: 16px;
+    text-align: left;
+  }
+  .intro-image {
+    max-width: 80%;
+    min-width: 80%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .haus-image {
+    display: none;
+  }
+  .main-content {
+    max-width: 80%;
+  }
+  .events {
+    padding: 0 0 4em 1em;
+  }
   .intro-text {
-    padding: 10% 0 10% 40%;
+    padding: 0 0 4em 40%;
     font-size: 14px;
   }
   .info-box {
     max-width: 60%;
     margin: 0 auto 1.5rem auto;
+  }
+}
+@media (min-width: 1025px) {
+  .main-content {
+    max-width: 75%;
+  }
+  .intro-image {
+    max-width: 60%;
+    min-width: 60%;
+  }
+  .intro-text {
+    padding: 0 0 4em 70%;
+    font-size: 14px;
+  }
+  .raeume {
+    margin: 0 20%;
   }
 }/*# sourceMappingURL=global.css.map */
